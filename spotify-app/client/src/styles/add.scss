@@ -1,0 +1,39 @@
+.song-form{
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+}
+.add-container{
+    display:flex;
+    flex:1;
+    align-items: center;
+    justify-content: center;
+}
+.song-container{
+    background-color: aquamarine;
+    padding:100px;
+    border-radius: 8px;
+    // border-color: ;
+}
+.label{
+    flex:1;
+    font-size: 20px;
+    font-weight: bold;
+}
+.song-input{
+    flex:1;
+}
+.label-input{
+    display:flex;
+    padding:30px;
+    gap:20px;
+}
+.addSong{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom:40px;
+}
+.btn-container{
+    text-align: center;
+}

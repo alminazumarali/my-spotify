@@ -1,0 +1,24 @@
+.container{
+    display:flex;
+    flex-direction: row;
+    background:linear-gradient(135deg,rgba(255,255,255,0.1),rgba(255,255,255,0));
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.18);
+    box-shadow:0 8px 32px 0 rgba(0,0,0,0.37);
+    border-radius:10px;
+    // color:white;
+    padding:15px;
+    justify-content: space-between;
+    flex:1;
+}
+.library{
+    font-size: 20px;
+}
+.addButton{
+    // color:white;
+    border-style:hidden;
+    background-color: transparent;
+    font-size: 20px;
+    
+}

@@ -1,0 +1,31 @@
+
+.navbar{
+    font-family: 'Poppins', sans-serif;
+    display:flex;
+    flex-direction: column;
+    padding:15px;
+    gap:5px;
+    background:linear-gradient(135deg,rgba(255,255,255,0.1),rgba(255,255,255,0));
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.18);
+    box-shadow:0 8px 32px 0 rgba(0,0,0,0.37);
+    border-radius: 10px;
+}
+.child{
+    margin-bottom:5px;
+    font-size:20px
+}
+.button2{
+    border-style: hidden;
+    text-align:left;
+    background-color: transparent;
+    width:400px;
+    height:50px;
+    word-spacing:5px;
+    font-size:20px;
+}
+.button2:hover{
+    color:white;
+
+}

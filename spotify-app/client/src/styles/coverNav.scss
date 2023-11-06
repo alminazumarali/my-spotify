@@ -1,0 +1,49 @@
+.header{
+    position:absolute;
+    width:100%;
+    z-index: 1;
+    background-color: transparent;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:15px;
+    align-items: center;
+    border-top-left-radius:15px;
+    border-top-right-radius:15px;
+    // color:black;
+}
+.header-bg{
+    border-top-left-radius:15px;
+    border-top-right-radius:15px;
+    background-color: #01435a;
+}
+.buttonClass{
+    display:flex;
+    flex-direction: row;
+    gap:10px;
+}
+.button1{
+    background-color: transparent;
+    border:0cm;
+    // color:rgb(211, 211, 211);
+    font-size: 20px;
+    margin-left: 15px;
+}
+.button1:hover{
+    color:white;
+}
+.edit{
+    font-size:20px;
+    padding:15px;
+    width:120px;
+    border-radius: 50px;
+    border-style: none;
+}
+.nav-Name{
+    display:flex;
+    flex-direction: row;
+    gap:20px;
+}
+#navName{
+    font-size: 30px;
+}
