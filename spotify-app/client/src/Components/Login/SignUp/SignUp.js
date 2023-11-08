@@ -7,25 +7,16 @@ import './SignUp.scss'
 function SignUp() {
   const navigate=useNavigate();
   const [formData,setFormData]=useState({
-    id:nanoid(),
+    nanoId:nanoid(),
     username:'',
     password:'',
     firstName:'',
     lastName:'',
     email:'',
-    phoneNumber:''
+    phNo:''
   })
-  const users=useSelector((state)=>state.auth.users);
   const handleSignUp = ()=>{
-    if(isUsernameUnique(formData.username,formData.email)){
-      navigate('/personalInfo',{state:formData})
-    }
-      else{
-      alert('Username already exist');
-    }
-  }
-  const isUsernameUnique = (username,email)=>{
-    return !users.some((user)=>user.username===username||user.email===email)
+    navigate('/personalInfo',{state:formData})
   }
   const handleChange = (e)=>{
     const {name,value}=e.target;
@@ -44,11 +35,11 @@ function SignUp() {
         </div>
           <div className='content-signUp'>
             <label className='label-signUp'>First Name :</label>
-            <input type="text" className='input-signUp' name='firstName' value={formData.firstName} onChange={handleChange} label='fName'/>
+            <input type="text" className='input-signUp' name='firstName' value={formData.firstName} onChange={handleChange} label='firstName'/>
           </div>
           <div className='content-signUp'>
             <label className='label-signUp'>Last Name :</label>
-            <input type="text" className='input-signUp' name='lastName' value={formData.lastName} onChange={handleChange} label='lName'/>
+            <input type="text" className='input-signUp' name='lastName' value={formData.lastName} onChange={handleChange} label='lastName'/>
           </div>
           <div className='content-signUp'>
             <label className='label-signUp'>Password :</label>
@@ -56,7 +47,7 @@ function SignUp() {
           </div>
           <div className='content-signUp'>
             <label className='label-signUp'>Phone Number :</label>
-            <input type="text" className='input-signUp' name='phoneNumber' value={formData.phoneNumber} onChange={handleChange} label='num'/>
+            <input type="text" className='input-signUp' name='phNo' value={formData.phNo} onChange={handleChange} label='phNo'/>
           </div>
           <div className='content-signUp'>
             <label className='label-signUp'>Email :</label>

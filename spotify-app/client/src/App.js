@@ -1,16 +1,16 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Add from './Components/Add';
 import Dashboard from './Components/Dashboard/Dashboard.js';
-import Home from './Components/Home/Home';
+import Cover from './Components/Home/Cover/Cover';
+import Home from './Components/Home/Home/Home';
+import Add from './Components/Home/Library/Add/Add';
+import Playlist from './Components/Home/Library/playlist/Playlist';
+import Search from './Components/Home/Navbar/Search/Search';
 import Personal from './Components/Login/Personal-Details/Personal.js';
 import SignIn from './Components/Login/SignIn/SignIn';
 import SignUp from './Components/Login/SignUp/SignUp';
 import Start from './Components/Login/Start/Start.js';
-import Cover from './Components/Cover';
-import Playlist from './Components/Playlist';
-import Search from './Components/Search';
-import Edit from './Components/UserEdit';
+import Edit from './Components/Home/CoverNav/Edit/UserEdit.js';
 
 function App() {
     return (

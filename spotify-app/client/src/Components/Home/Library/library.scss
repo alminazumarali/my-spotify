@@ -6,7 +6,7 @@
     -webkit-backdrop-filter:blur(10px);
     border:1px solid rgba(255,255,255,0.18);
     box-shadow:0 8px 32px 0 rgba(0,0,0,0.37);
-    border-radius:10px;
+    border-radius:15px;
     // color:white;
     padding:15px;
     justify-content: space-between;
@@ -20,5 +20,29 @@
     border-style:hidden;
     background-color: transparent;
     font-size: 20px;
-    
+}
+.dropdown{
+    display:flex;
+    flex-direction: column;
+    // gap:10px;
+    list-style-type: none;
+}
+.dropdown1{
+    position:absolute;
+    right: 0px;
+    display:flex;
+    flex-direction: column;
+    // padding:10px;
+    background-color: #83677b;
+    border: 1px solid #adadad;
+}
+.lib-btn{
+    height:40px;
+    width:150px;
+    background-color: transparent;
+    border:none;
+    font-size: 17px;
+}
+.lib-btn:hover{
+    background-color: #adadad;
 }

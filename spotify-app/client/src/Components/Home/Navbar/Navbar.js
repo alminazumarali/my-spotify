@@ -4,7 +4,7 @@ import {GoHome} from 'react-icons/go';
 import {GoHomeFill} from 'react-icons/go';
 import {BiSearch} from 'react-icons/bi';
 import {BiSearchAlt} from 'react-icons/bi';
-import '../styles/navbar.scss';
+import './navbar.scss';
 import {Button} from '@mui/base/Button';
 import {useNavigate} from 'react-router-dom';
 function Navbar({userId}) {

@@ -1,8 +1,8 @@
-import React,{useState} from 'react'
-import { AddSongs } from '../slices/SongSlice'
-import {useDispatch} from 'react-redux'
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import '../styles/add.scss'
+import { AddSongs } from '../../../../slices/SongSlice';
+import './add.scss';
 
 function Add() {
   const dispatch = useDispatch();
@@ -32,15 +32,15 @@ function Add() {
         <div>
             <form className='song-form' onSubmit={handleSubmit}>
               <div className='label-input'>
-                <label className='label'>Song Name:</label>
+                <label className='label'>Song Name :</label>
                 <input type='text' className='song-input' value={formSong.name} name='name' onChange={handleChange} label='name'/>
               </div>
               <div className='label-input'>
-                <label className='label'>Song:</label>
+                <label className='label'>Song :</label>
                 <input type='file' className='song-input' name='song' onChange={handleFileChange} label='song'/>
               </div>
               <div className='label-input'>
-                <label className='label'>Profile:</label>
+                <label className='label'>Profile :</label>
                 <input type='file' className='song-input' name='songProfile' onChange={handleFileChange} label='songProfile'/>
               </div>
               <div className='btn-container'>

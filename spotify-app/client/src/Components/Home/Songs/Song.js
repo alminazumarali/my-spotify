@@ -1,11 +1,11 @@
 import React,{useState,useEffect} from 'react'
 import {GrAdd} from 'react-icons/gr'
 import {Button} from '@mui/base/Button'
-import '../styles/Songs.scss'
+import './Songs.scss'
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import Music from './music_profile.jpg'
-import Stream from "./Stream.js";
+import Music from '../../../Images/music_profile.jpg'
+import Stream from "../Stream/Stream";
 import {MdOutlineDeleteOutline} from 'react-icons/md'
 
 function formatDuration(seconds) {
@@ -43,12 +43,12 @@ function Song() {
     
     return (
         <div className='Song-container'>
-            <div className='add-songs'>
+            {/* <div className='add-songs'>
                     <div className='add'>
                         <Button className='add-button' onClick={()=>navigate("add")}><GrAdd/></Button>
                     </div>
                     <div className='add-text'>Add Songs</div>
-            </div>
+            </div> */}
             <div className='song-buttons'>
                 {
                     songs.map((song,index)=>{
