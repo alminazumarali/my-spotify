@@ -11,6 +11,7 @@ import SignIn from './Components/Login/SignIn/SignIn';
 import SignUp from './Components/Login/SignUp/SignUp';
 import Start from './Components/Login/Start/Start.js';
 import Edit from './Components/Home/CoverNav/Edit/UserEdit.js';
+import UserSong from './Components/Home/Library/UserSongs/UserSong.js'
 
 function App() {
     return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="/home" element={<Home/>}>
                 <Route index element={<Cover/>}/>
                 <Route path="search" element={<Search/>}/>
+                <Route path="userSong" element={<UserSong/>}/>
                 <Route path="edit" element={<Edit/>}/>
                 <Route path="playlist" element={<Playlist/>}/>
                 <Route path="add" element={<Add/>}/>

@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-// import { setAuthenticated, setPassword, setUsername } from '../../../slices/userAuth'
 import './signin.scss'
 import axios from 'axios';
 import { setUser } from '../../../slices/UserSlice';
@@ -17,7 +16,7 @@ function SignIn() {
     }
     try {
       console.log(data);
-      const response = await axios.post('http://192.168.1.122:8081/user/login', data,config);
+      const response = await axios.post(`http://192.168.1.122:8081/user/login/${data.username}/${data.password}`, config);
       console.log("login before")
       const userData=response.data;
       console.log(userData);

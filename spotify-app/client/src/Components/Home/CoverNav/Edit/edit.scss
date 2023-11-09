@@ -4,6 +4,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color:white;
+}
+.edit-personal{
+    font-size:50px;
+    font-weight:bold;
 }
 .edit-container{
     display:flex;
@@ -20,9 +25,13 @@
     display:flex;
     flex-direction:column;
     gap:20px;
+    align-items: center;
 }
 .contents{
     display:flex;
-    flex-direction:row;
-    
+    width:100%;
+    align-items: left;
+    gap:50px;
+    justify-content: space-between;
+    font-size: 20px;
 }

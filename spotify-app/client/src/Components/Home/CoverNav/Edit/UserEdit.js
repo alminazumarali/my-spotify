@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { setUser } from '../../../../slices/UserSlice';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 function UserEdit() {
     const dispatch= useDispatch();
@@ -13,6 +14,7 @@ function UserEdit() {
     // console.log(userId);
     // const user = users.find((user) => user.id === userId);
     const initialFormData = {
+        nanoId:user.nanoId,
         username: '',
         firstName: '',
         lastName: '',
@@ -21,22 +23,59 @@ function UserEdit() {
         email: '',
     };
     const [formData,setFormData]=useState(user || initialFormData)
+    const [editData,setEditData]=useState({
+        nanoId:user.nanoId,
+        username:"",
+        password:"",
+        firstName:"",
+        lastName:"",
+        phoneNumber:"",
+        email:"",
+    })
+    const sendDataToBackend = async () => {
+        const formConfig = {
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        };
+        try {
+            console.log("before form data");
+            console.log("edit data",editData);
+            const response = await axios.post('http://192.168.1.122:8081/user/edit', editData, formConfig);
+            if (response.status === 200) {
+                console.log("formData sent");
+                if(response===null){
+                    alert("userName already exists")
+                    navigate("edit")
+                }
+                else{
+                    dispatch(setUser(formData));
+                }
+            }else {
+                console.log("data not sent");
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    }
     const handleEdit = (e)=>{
         e.preventDefault();
         console.log(formData);
-        dispatch(setUser(formData));
+        sendDataToBackend();
+        
         // navigate('edit')
-    }
+        }
     const handleChange=(e)=>{
         const {name,value}=e.target;
         console.log("name",name,value);
+        setEditData({...editData,[name]:value});
         setFormData((prevFormData) => ({...prevFormData,[name]: value,}));
     }
     return (
         <div className='EditInfo'>
             <div className='edit-container'>
-                <div className='edit'>
-                Edit
+                <div className='edit-personal'>
+                EDIT
                 </div>
                 <form className='forms' onSubmit={handleEdit}>
                     <div className='contents'>

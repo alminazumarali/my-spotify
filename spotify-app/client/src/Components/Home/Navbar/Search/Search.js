@@ -2,12 +2,12 @@ import React,{useState,useEffect} from 'react';
 function Search(){
     const [imageSrc, setImageSrc] = useState(null);
     useEffect(() => {
-        const imageUrl = 'http://192.168.1.122:8081/image/img-4.jpg';
+        const imageUrl = 'http://192.168.1.122:8081/image/white_notification.png';
     
         fetch(imageUrl, {
             method: 'GET',
             headers: {
-                'Content-Type': 'image/jpeg',
+                'Content-Type': 'image/png',
             },
             })
             .then((response) => {

@@ -33,6 +33,7 @@
     color:white;
 }
 .edit{
+    position:relative;
     font-size:20px;
     padding:15px;
     width:120px;
@@ -46,4 +47,17 @@
 }
 #navName{
     font-size: 30px;
+}
+.btn{
+    display:flex;
+    flex-direction: row;
+    gap:10px;
+}
+.signOut{
+    position:relative;
+    font-size:20px;
+    padding:15px;
+    width:120px;
+    border-radius: 50px;
+    border-style: none;
 }

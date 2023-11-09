@@ -12,7 +12,7 @@ function Cover() {
   const [imageSrc, setImageSrc] = useState(null);
   const [coverImage,setCoverImage]=useState(null);
     useEffect(() => {
-        const imageUrl = `http://192.168.1.122:8081/image/${user.name}`;
+        const imageUrl = `http://192.168.1.122:8081/user/image/${user.nanoId}/${user.name}`;
         fetch(imageUrl, {
             method: 'GET',
             headers: {
@@ -35,7 +35,7 @@ function Cover() {
         }, []);
 
   useEffect(() => {
-    const imageUrlCover = `http://192.168.1.122:8081/image/${user.coverName}`;
+    const imageUrlCover = `http://192.168.1.122:8081/user/image1/${user.nanoId}/${user.coverName}`;
         fetch(imageUrlCover, {
             method: 'GET',
             headers: {

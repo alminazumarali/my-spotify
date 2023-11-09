@@ -14,7 +14,7 @@ function Library(){
         setDropDownVisible(false);
         if(e.target.value=='add1')
         {
-            navigate("add");
+            navigate("UserSong");
         }
         else{
             navigate("playlist");
